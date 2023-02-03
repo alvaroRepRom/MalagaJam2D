@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6775095348176679653
+--- !u!114 &-6585801441630445372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/DeathSound
+  m_Name: event:/Choose_Option
   m_EditorClassIdentifier: 
-  Path: event:/DeathSound
+  Path: event:/Choose_Option
   Guid:
-    Data1: -1300546371
-    Data2: 1270868521
-    Data3: 998454936
-    Data4: 2130026773
+    Data1: 180204670
+    Data2: 1220627909
+    Data3: -1864033611
+    Data4: 910477796
   Banks:
   - {fileID: -3264882139456874938}
   IsStream: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1036
+  Length: 0
 --- !u!114 &-5692496713745375632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638110481414860406
+  lastModified: 638110552713514527
   FileSizes:
   - Name: 
-    Value: 808
+    Value: 898
   Exists: 1
 --- !u!114 &-3264882139456874938
 MonoBehaviour:
@@ -62,9 +62,36 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638110481414860406
+  lastModified: 638110552713494375
   FileSizes: []
   Exists: 1
+--- !u!114 &-3030846177536278382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Open_Dialog
+  m_EditorClassIdentifier: 
+  Path: event:/Open_Dialog
+  Guid:
+    Data1: -1623865711
+    Data2: 1299391634
+    Data3: 2048111488
+    Data4: -214319129
+  Banks:
+  - {fileID: -3264882139456874938}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,16 +108,18 @@ MonoBehaviour:
   - {fileID: -5692496713745375632}
   - {fileID: -3264882139456874938}
   EditorEvents:
-  - {fileID: 5710228928407691010}
-  - {fileID: -6775095348176679653}
+  - {fileID: 2207666566597551706}
+  - {fileID: 4786422311962242552}
+  - {fileID: -6585801441630445372}
+  - {fileID: -3030846177536278382}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3264882139456874938}
   StringsBanks:
   - {fileID: -5692496713745375632}
-  cacheTime: 638110481414860406
+  cacheTime: 638110552713514527
   cacheVersion: 131601
---- !u!114 &5710228928407691010
+--- !u!114 &2207666566597551706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,9 +129,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
+  m_Name: event:/UI_Click
   m_EditorClassIdentifier: 
-  Path: event:/Music
+  Path: event:/UI_Click
+  Guid:
+    Data1: -1798336490
+    Data2: 1123627770
+    Data3: 2123351185
+    Data4: 137394641
+  Banks:
+  - {fileID: -3264882139456874938}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4786422311962242552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music_Chill
+  m_EditorClassIdentifier: 
+  Path: event:/Music_Chill
   Guid:
     Data1: 1679159394
     Data2: 1199652082
@@ -110,10 +166,10 @@ MonoBehaviour:
     Data4: 1646242387
   Banks:
   - {fileID: -3264882139456874938}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 8568
+  Length: 21594
