@@ -1,35 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 7482506551819278983}
-  - {fileID: 5383217578976090863}
-  EditorEvents:
-  - {fileID: 5795629841311693837}
-  - {fileID: 161362335214780554}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 5383217578976090863}
-  StringsBanks:
-  - {fileID: 7482506551819278983}
-<<<<<<< HEAD
-  cacheTime: 638110481414860406
-=======
-  cacheTime: 638110482977181873
->>>>>>> a9c7508b2989bd41b1b643ba1107f332007fe0ff
-  cacheVersion: 131601
---- !u!114 &161362335214780554
+--- !u!114 &-6775095348176679653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +19,7 @@ MonoBehaviour:
     Data3: 998454936
     Data4: 2130026773
   Banks:
-  - {fileID: 5383217578976090863}
+  - {fileID: -3264882139456874938}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -56,7 +27,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1036
---- !u!114 &5383217578976090863
+--- !u!114 &-5692496713745375632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638110481414860406
+  FileSizes:
+  - Name: 
+    Value: 808
+  Exists: 1
+--- !u!114 &-3264882139456874938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,14 +62,35 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-<<<<<<< HEAD
   lastModified: 638110481414860406
-=======
-  lastModified: 638110482977181873
->>>>>>> a9c7508b2989bd41b1b643ba1107f332007fe0ff
   FileSizes: []
   Exists: 1
---- !u!114 &5795629841311693837
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -5692496713745375632}
+  - {fileID: -3264882139456874938}
+  EditorEvents:
+  - {fileID: 5710228928407691010}
+  - {fileID: -6775095348176679653}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -3264882139456874938}
+  StringsBanks:
+  - {fileID: -5692496713745375632}
+  cacheTime: 638110481414860406
+  cacheVersion: 131601
+--- !u!114 &5710228928407691010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,7 +109,7 @@ MonoBehaviour:
     Data3: 455574463
     Data4: 1646242387
   Banks:
-  - {fileID: 5383217578976090863}
+  - {fileID: -3264882139456874938}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -105,27 +117,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8568
---- !u!114 &7482506551819278983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMODBanks/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-<<<<<<< HEAD
-  lastModified: 638110481414860406
-=======
-  lastModified: 638110482977181873
->>>>>>> a9c7508b2989bd41b1b643ba1107f332007fe0ff
-  FileSizes:
-  - Name: 
-    Value: 808
-  Exists: 1
