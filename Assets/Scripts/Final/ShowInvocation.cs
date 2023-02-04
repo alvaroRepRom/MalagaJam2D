@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShowInvocation : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class ShowInvocation : MonoBehaviour
         {
             cat.SetActive(true);
         }
-        else
+        else if (percentaje > 0)
         {
             dog.SetActive(true);
         }
@@ -64,6 +65,7 @@ public class ShowInvocation : MonoBehaviour
             yield return null;
         }
 
-        Application.Quit();
+        AudioManager.Instance.CloseInstance();
+        SceneManager.LoadScene("MainMenu");
     }
 }

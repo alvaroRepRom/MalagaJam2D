@@ -69,6 +69,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void CloseInstance()
+    {
+        musicEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        FMODUnity.RuntimeManager.DetachInstanceFromGameObject(musicEventInstance);
+    }
+
     #region Sounds
     public void ClickSound() => FMODUnity.RuntimeManager.PlayOneShot(soundsEventsSO.clickSound);
     public void OpenDialogSound() => FMODUnity.RuntimeManager.PlayOneShot(soundsEventsSO.openDialogSound);
