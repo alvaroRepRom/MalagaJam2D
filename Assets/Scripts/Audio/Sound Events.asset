@@ -47,3 +47,5 @@ MonoBehaviour:
       Data3: 60582817
       Data4: -271188135
     Path: event:/Music_Dark
+  changeNoiseParam: Change Noise
+  sectionParam: Section

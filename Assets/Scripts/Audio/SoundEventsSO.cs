@@ -9,4 +9,9 @@ public class SoundEventsSO : ScriptableObject
 
     public FMODUnity.EventReference chillMusic;
     public FMODUnity.EventReference darkInvokeMusic;
+
+    [FMODUnity.ParamRef]
+    public string changeNoiseParam;
+    [FMODUnity.ParamRef]
+    public string sectionParam;
 }
