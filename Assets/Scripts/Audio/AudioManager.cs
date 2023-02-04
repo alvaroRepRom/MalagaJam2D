@@ -42,10 +42,27 @@ public class AudioManager : MonoBehaviour
             yield return null;
         }
 
+
+
         musicEventInstance.setPaused(true);
-        musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(soundsEventsSO.darkInvokeMusic);
+        musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(soundsEventsSO.noiseMusic);
+        musicEventInstance.setVolume(1);
         musicEventInstance.start();
 
+        while (timer <= reduceVolSeconds)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+
+
+        musicEventInstance.setPaused(true);
+        musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(soundsEventsSO.darkInvokeMusic);
+        musicEventInstance.setVolume(0.1f);
+        musicEventInstance.start();
+
+        timer = 0f;
         while (timer <= reduceVolSeconds)
         {
             timer += Time.deltaTime;
