@@ -1805,6 +1805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8964716519525508847}
   - component: {fileID: 8964716519525508848}
+  - component: {fileID: 1965404087607791344}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -1870,7 +1871,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ea8e460cb1c386a4c810be9b8640ed9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -1879,6 +1880,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1965404087607791344
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964716519525508846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfbf61d52af8ecc4a900381b1658d9e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8964716519883991313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,7 +1984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e2bb9d453247979014b98af52455d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
   archetipe: 2
   maxTime: 10
   minTime: 6
@@ -1975,6 +1995,11 @@ MonoBehaviour:
   brote1: {fileID: 3596222555046296607}
   brote2: {fileID: 5014381104547531611}
   raices: {fileID: 3395106852036551127}
+  root0Speed: 0
+  root1Speed: 0
+  root2Speed: 0
+  interacting: 0
+  runTimer: 0
 --- !u!114 &5042140114132679015
 MonoBehaviour:
   m_ObjectHideFlags: 0
