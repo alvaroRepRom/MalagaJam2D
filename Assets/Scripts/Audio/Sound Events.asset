@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbfcdafa323b914390dca0b165f373e, type: 3}
+  m_Name: Sound Events
+  m_EditorClassIdentifier: 
+  clickSound:
+    Guid:
+      Data1: -1798336490
+      Data2: 1123627770
+      Data3: 2123351185
+      Data4: 137394641
+    Path: event:/UI_Click
+  openDialogSound:
+    Guid:
+      Data1: -1623865711
+      Data2: 1299391634
+      Data3: 2048111488
+      Data4: -214319129
+    Path: event:/Open_Dialog
+  chooseOptionSound:
+    Guid:
+      Data1: 180204670
+      Data2: 1220627909
+      Data3: -1864033611
+      Data4: 910477796
+    Path: event:/Choose_Option
+  chillMusic:
+    Guid:
+      Data1: 1679159394
+      Data2: 1199652082
+      Data3: 455574463
+      Data4: 1646242387
+    Path: event:/Music_Chill
+  darkInvokeMusic:
+    Guid:
+      Data1: -440893594
+      Data2: 1150104338
+      Data3: 60582817
+      Data4: -271188135
+    Path: event:/Music_Dark
+  changeNoiseParam: Change Noise
+  sectionParam: Section
