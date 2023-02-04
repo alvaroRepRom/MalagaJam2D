@@ -72,6 +72,7 @@ namespace Enemy
                 {
                     if (_rootValue != 3 && !canvas.activeSelf)
                     {
+                        AudioManager.Instance.OpenDialogSound();
                         canvas.SetActive(true);
                         GetComponent<ConversationSystem>().SetText();
                     }
@@ -94,6 +95,7 @@ namespace Enemy
                     string response = button.GetComponentInChildren<TextMeshProUGUI>().text;
                     _rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
                     ChangeSprite();
+                    AudioManager.Instance.ChooseOptionSound();
                     canvas.SetActive(false);
                 }
 
