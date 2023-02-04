@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638111112178875240
+  lastModified: 638111118007717425
   FileSizes:
   - Name: 
-    Value: 898
+    Value: 1048
   Exists: 1
 --- !u!114 &-3264882139456874938
 MonoBehaviour:
@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638111112178875240
+  lastModified: 638111118007707188
   FileSizes: []
   Exists: 1
 --- !u!114 &-3030846177536278382
@@ -112,12 +112,13 @@ MonoBehaviour:
   - {fileID: 4786422311962242552}
   - {fileID: -6585801441630445372}
   - {fileID: -3030846177536278382}
+  - {fileID: 6745320119969433401}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3264882139456874938}
   StringsBanks:
   - {fileID: -5692496713745375632}
-  cacheTime: 638111112178875240
+  cacheTime: 638111118007717425
   cacheVersion: 131601
 --- !u!114 &2207666566597551706
 MonoBehaviour:
@@ -146,6 +147,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4183946703898574152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Chill/Change Noise
+  m_EditorClassIdentifier: 
+  Name: Change Noise
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3082111660
+    data2: 4025912319
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4786422311962242552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +194,63 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 4183946703898574152}
   MinDistance: 1
   MaxDistance: 20
-  Length: 21594
+  Length: 56415
+--- !u!114 &6247332032713768908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Dark/Section
+  m_EditorClassIdentifier: 
+  Name: Section
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1714050097
+    data2: 3385091298
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Dm
+  - Am
+  - Edim
+  Exists: 1
+--- !u!114 &6745320119969433401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music_Dark
+  m_EditorClassIdentifier: 
+  Path: event:/Music_Dark
+  Guid:
+    Data1: -440893594
+    Data2: 1150104338
+    Data3: 60582817
+    Data4: -271188135
+  Banks:
+  - {fileID: -3264882139456874938}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6247332032713768908}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 47568

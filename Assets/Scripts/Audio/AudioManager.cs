@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FMOD;
 
@@ -7,7 +5,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    public string darkMusicEvent;
+    [FMODUnity.ParamRef]
+    public string changeNoiseParam;
 
     public SoundEventsSO soundsEventsSO;
 
