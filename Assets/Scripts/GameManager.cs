@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
         {
             hasEndGame = true;
             PlayerPrefs.SetInt("people", peopleLeft);
+            PlayerPrefs.SetInt("languaje", peopleLeft);
             PlayerPrefs.Save();
             onTimeComplete?.Invoke();
             StartCoroutine(WaitToNextScene());
