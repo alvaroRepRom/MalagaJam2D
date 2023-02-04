@@ -1,3 +1,4 @@
+using Enemy;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
@@ -20,6 +21,7 @@ public class PlayerInteraction : MonoBehaviour
         //Si no hay ningún NPC en la variable, salimos del metodo.
         if (!_currentNPC) return;
         Debug.Log("Interactuando");
+        _currentNPC.GetComponent<EnemyManager>().ActiveDialogue();
     }
     
     private void OnTriggerEnter2D(Collider2D other)
