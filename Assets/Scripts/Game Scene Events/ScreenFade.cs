@@ -23,6 +23,7 @@ public class ScreenFade : MonoBehaviour
 
     private void FadeIn()
     {
+        fondo.enabled = true;
         Color newColor = new(fondo.color.r, fondo.color.r, fondo.color.r, 1);
         fondo.DOColor(newColor, fadeSeconds).SetEase(Ease.InSine).Play();
     }
