@@ -67,7 +67,8 @@ namespace Dialogue
         private void InitiateDict()
         {
             dic = new List<Question>();
-            CreateQuestion("Hola", "Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4");
+            CreateQuestion("Hola esto es un texto exageradamente largo para que quepa completamente en el cuadro de texto",
+                "Respuesta 1", "Respuesta 2", "Respuesta 3", "Respuesta 4");
             CreateQuestion("Adios", "Cosa 1", "Cosa 2", "Cosa 3", "Cosa 4");
         }
 
