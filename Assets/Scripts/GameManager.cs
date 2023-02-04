@@ -33,6 +33,15 @@ public class GameManager : MonoBehaviour
         ChangeScene();
     }
 
+    public void InitManager()
+    {
+        timer = 0f;
+        clockTimer = 0f;
+        ticks = 0;
+        hasChangeMusic = false;
+        hasEndGame = false;
+    }
+
     private void FireClock()
     {
         float interval = aGameSeconds / 12;
