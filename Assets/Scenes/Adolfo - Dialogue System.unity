@@ -577,11 +577,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   archetipe: 0
+  maxTime: 0
+  minTime: 0
   canvas: {fileID: 1061546748}
   button1: {fileID: 1039125688}
   button2: {fileID: 1036160812}
   button3: {fileID: 2027194749}
   button4: {fileID: 1898159562}
+  brote1: {fileID: 0}
+  brote2: {fileID: 0}
+  raices: {fileID: 0}
 --- !u!61 &1827834297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -625,6 +630,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1916763906995003529, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
+      propertyPath: maxTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916763906995003529, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
+      propertyPath: minTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8964716519883991313, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
       propertyPath: m_Name
       value: Enemy (1)

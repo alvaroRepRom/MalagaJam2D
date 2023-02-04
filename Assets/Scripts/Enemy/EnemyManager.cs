@@ -3,6 +3,7 @@ using Dialogue;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Enemy
 {
@@ -18,20 +19,35 @@ namespace Enemy
     {
         public float speed;
         public Archetipe archetipe;
+        public int maxTime, minTime;
         
+        [Header("Canvas")]
         public GameObject canvas;
-        public GameObject button1, button2, button3, button4;
+        public GameObject button1;
+        public GameObject button2;
+        public GameObject button3;
+        public GameObject button4;
+        
+        [Header("Brotes")]
+        public GameObject brote1;
+        public GameObject brote2;
+        public GameObject raices;
 
-        private int rootValue;
+        private int _rootValue;
+        private int _unrootTime;
+        private float _time;
 
         private void Awake()
         {
-            rootValue = 2;
+            _rootValue = 2;
+            _unrootTime = Random.Range(minTime, maxTime);
+            _time = 0.0f;
+            ChangeSprite();
         }
 
         public void ActiveDialogue()
         {
-            if (rootValue != 3 && !canvas.activeSelf)
+            if (_rootValue != 3 && !canvas.activeSelf)
             {
                 canvas.SetActive(true);
                 GetComponent<ConversationSystem>().SetText();
@@ -41,6 +57,8 @@ namespace Enemy
         private void Update()
         {
             if(canvas.activeSelf) PressButton();
+            if (_time > _unrootTime) DecreaseRoot();
+            _time += Time.deltaTime;
         }
 
         private void PressButton()
@@ -54,12 +72,48 @@ namespace Enemy
             if (Input.GetKeyDown(KeyCode.Alpha4))
                 ButtonSelected(button4.GetComponent<Button>());
         }
+        
         private void ButtonSelected(Button button)
         {
-            String response = button.GetComponentInChildren<TextMeshProUGUI>().text;
-            rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
+            string response = button.GetComponentInChildren<TextMeshProUGUI>().text;
+            _rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
+            ChangeSprite();
             canvas.SetActive(false);
         }
-        
+
+        private void ChangeSprite()
+        {
+            switch (_rootValue)
+            {
+                case 1:
+                    brote1.SetActive(true);
+                    brote2.SetActive(false);
+                    break;
+                case 2:
+                    brote1.SetActive(false);
+                    brote2.SetActive(true);
+                    raices.SetActive(false);
+                    break;
+                case 3:
+                    brote2.SetActive(false);
+                    raices.SetActive(true);
+                    break;
+                default:
+                    brote1.SetActive(false);
+                    break;
+            }
+            _time = 0.0f;
+        }
+
+        private void DecreaseRoot()
+        {
+            if (_rootValue != 0)
+            {
+                _rootValue -= 1;
+                ChangeSprite();
+                _unrootTime = Random.Range(minTime, maxTime);
+                _time = 0.0f;
+            }
+        }
     }
 }
