@@ -808,8 +808,8 @@ MonoBehaviour:
   dog: {fileID: 1738625114}
   cat: {fileID: 2095211056}
   goblin: {fileID: 1089640396}
-  timeToShow: 5
-  maxNumOfPeople: 20
+  timeToShow: 3
+  maxNumOfPeople: 16
 --- !u!1 &2095211056
 GameObject:
   m_ObjectHideFlags: 0
