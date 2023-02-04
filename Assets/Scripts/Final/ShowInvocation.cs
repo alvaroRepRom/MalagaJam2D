@@ -48,5 +48,19 @@ public class ShowInvocation : MonoBehaviour
         }
 
         PlayerPrefs.DeleteAll();
+        StartCoroutine(EndGame());
+    }
+
+    private IEnumerator EndGame()
+    {
+        float timer = 0f;
+
+        while (timer < 5f)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        Application.Quit();
     }
 }
