@@ -31,8 +31,11 @@ namespace Enemy
 
         public void ActiveDialogue()
         {
-            canvas.SetActive(true);
-            GetComponent<ConversationSystem>().SetText();
+            if (rootValue != 3 && !canvas.activeSelf)
+            {
+                canvas.SetActive(true);
+                GetComponent<ConversationSystem>().SetText();
+            }
         }
 
         private void Update()
