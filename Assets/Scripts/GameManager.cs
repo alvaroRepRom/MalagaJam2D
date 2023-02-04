@@ -3,13 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameManager Instance { get; private set; }
+
     public float aGameSeconds = 60f;
     public GameObject[] candles;
+    public int peopleLeft = 16;
 
     private float timer = 0f;
     private float clockTimer = 0f;
     private int ticks = 0;
     private bool hasChangeMusic = false;
+
+    private void Awake() => Instance = this;
 
     private void Update()
     {
@@ -44,6 +49,12 @@ public class GameManager : MonoBehaviour
     private void ChangeScene() 
     {
         if (timer >= aGameSeconds)
+        {
+            PlayerPrefs.SetInt("people", peopleLeft);
+            PlayerPrefs.Save();
             SceneManager.LoadScene("Final"); 
+        }
     }
+
+    public void NPCHasLeftRoom() => peopleLeft--;
 }

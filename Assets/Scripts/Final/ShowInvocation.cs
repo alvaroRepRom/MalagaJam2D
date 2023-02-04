@@ -49,9 +49,4 @@ public class ShowInvocation : MonoBehaviour
 
         PlayerPrefs.DeleteAll();
     }
-
-    /*
-     * PlayerPrefs.SetInt("people", 15);
-        PlayerPrefs.Save();
-     * */
 }
