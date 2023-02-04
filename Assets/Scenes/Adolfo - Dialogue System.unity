@@ -442,29 +442,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1036160813, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1039125689, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 59.999985
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061546748, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898159563, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -136.00003
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027194750, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -71.00003
-      objectReference: {fileID: 0}
     - target: {fileID: 8964716519883991313, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964716519883991313, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8964716519883991315, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
       propertyPath: m_RootOrder

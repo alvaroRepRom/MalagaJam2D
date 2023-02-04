@@ -69,35 +69,35 @@ namespace Enemy
         #region Dialogues
 
         public void ActiveDialogue()
-                {
-                    if (_rootValue != 3 && !canvas.activeSelf)
-                    {
-                        AudioManager.Instance.OpenDialogSound();
-                        canvas.SetActive(true);
-                        GetComponent<ConversationSystem>().SetText();
-                    }
-                }
-                
-                private void PressButton()
-                {
-                    if (Input.GetKeyDown(KeyCode.Alpha1))
-                        ButtonSelected(button1.GetComponent<Button>());
-                    if (Input.GetKeyDown(KeyCode.Alpha2))
-                        ButtonSelected(button2.GetComponent<Button>());
-                    if (Input.GetKeyDown(KeyCode.Alpha3))
-                        ButtonSelected(button3.GetComponent<Button>());
-                    if (Input.GetKeyDown(KeyCode.Alpha4))
-                        ButtonSelected(button4.GetComponent<Button>());
-                }
-                
-                private void ButtonSelected(Button button)
-                {
-                    string response = button.GetComponentInChildren<TextMeshProUGUI>().text;
-                    _rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
-                    ChangeSprite();
-                    AudioManager.Instance.ChooseOptionSound();
-                    canvas.SetActive(false);
-                }
+        {
+            if (_rootValue != 3 && !canvas.activeSelf)
+            {
+                AudioManager.Instance.OpenDialogSound();
+                canvas.SetActive(true);
+                GetComponent<ConversationSystem>().SetText();
+            }
+        }
+        
+        private void PressButton()
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                ButtonSelected(button1.GetComponent<Button>());
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+                ButtonSelected(button2.GetComponent<Button>());
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+                ButtonSelected(button3.GetComponent<Button>());
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+                ButtonSelected(button4.GetComponent<Button>());
+        }
+        
+        private void ButtonSelected(Button button)
+        {
+            string response = button.GetComponentInChildren<TextMeshProUGUI>().text;
+            _rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
+            ChangeSprite();
+            AudioManager.Instance.ChooseOptionSound();
+            canvas.SetActive(false);
+        }
 
         #endregion
 
