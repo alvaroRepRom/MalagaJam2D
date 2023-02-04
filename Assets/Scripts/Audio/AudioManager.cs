@@ -26,13 +26,9 @@ public class AudioManager : MonoBehaviour
         musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(soundsEventsSO.chillMusic);
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(musicEventInstance, transform);
         musicEventInstance.start();
-        //musicEventInstance.release();
     }
 
-    public void ChangeMusic()
-    {
-        StartCoroutine(ReduceVolume());
-    }
+    public void ChangeMusic() => StartCoroutine(ReduceVolume());
 
     private IEnumerator ReduceVolume()
     {
