@@ -17,7 +17,6 @@ namespace Enemy
     
     public class EnemyManager : MonoBehaviour
     {
-        public float speed;
         public Archetipe archetipe;
         public int maxTime, minTime;
         
@@ -33,6 +32,12 @@ namespace Enemy
         public GameObject brote2;
         public GameObject raices;
 
+        [Header("Logic")] 
+        public float root0Speed, root1Speed, root2Speed;
+        public bool interacting;
+        public bool runTimer;
+
+        private EnemyState _currentState;
         private int _rootValue;
         private int _unrootTime;
         private float _time;
@@ -45,15 +50,6 @@ namespace Enemy
             ChangeSprite();
         }
 
-        public void ActiveDialogue()
-        {
-            if (_rootValue != 3 && !canvas.activeSelf)
-            {
-                canvas.SetActive(true);
-                GetComponent<ConversationSystem>().SetText();
-            }
-        }
-
         private void Update()
         {
             if(canvas.activeSelf) PressButton();
@@ -61,25 +57,49 @@ namespace Enemy
             _time += Time.deltaTime;
         }
 
-        private void PressButton()
+        #region States
+
+        public void ChangeState()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-                ButtonSelected(button1.GetComponent<Button>());
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-                ButtonSelected(button2.GetComponent<Button>());
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-                ButtonSelected(button3.GetComponent<Button>());
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-                ButtonSelected(button4.GetComponent<Button>());
+            
         }
+
+        #endregion
         
-        private void ButtonSelected(Button button)
-        {
-            string response = button.GetComponentInChildren<TextMeshProUGUI>().text;
-            _rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
-            ChangeSprite();
-            canvas.SetActive(false);
-        }
+        #region Dialogues
+
+        public void ActiveDialogue()
+                {
+                    if (_rootValue != 3 && !canvas.activeSelf)
+                    {
+                        canvas.SetActive(true);
+                        GetComponent<ConversationSystem>().SetText();
+                    }
+                }
+                
+                private void PressButton()
+                {
+                    if (Input.GetKeyDown(KeyCode.Alpha1))
+                        ButtonSelected(button1.GetComponent<Button>());
+                    if (Input.GetKeyDown(KeyCode.Alpha2))
+                        ButtonSelected(button2.GetComponent<Button>());
+                    if (Input.GetKeyDown(KeyCode.Alpha3))
+                        ButtonSelected(button3.GetComponent<Button>());
+                    if (Input.GetKeyDown(KeyCode.Alpha4))
+                        ButtonSelected(button4.GetComponent<Button>());
+                }
+                
+                private void ButtonSelected(Button button)
+                {
+                    string response = button.GetComponentInChildren<TextMeshProUGUI>().text;
+                    _rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
+                    ChangeSprite();
+                    canvas.SetActive(false);
+                }
+
+        #endregion
+
+        #region Roots
 
         private void ChangeSprite()
         {
@@ -115,5 +135,7 @@ namespace Enemy
                 _time = 0.0f;
             }
         }
+
+        #endregion
     }
 }
