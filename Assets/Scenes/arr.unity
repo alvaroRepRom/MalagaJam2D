@@ -154,8 +154,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7236533ea2165c747a3ff62ab922b888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  darkMusicEvent: 
+  chill:
+    Guid:
+      Data1: 1679159394
+      Data2: 1199652082
+      Data3: 455574463
+      Data4: 1646242387
+    Path: event:/Music_Chill
+  changeNoiseParam: Change Noise
   soundsEventsSO: {fileID: 11400000, guid: d30534c4438f97041b0fc9399fbde07c, type: 2}
+  musicEmitter: {fileID: 197660519}
+  darkMusicEmitter: {fileID: 0}
 --- !u!114 &197660519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +172,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197660517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 

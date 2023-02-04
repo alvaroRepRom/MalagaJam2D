@@ -33,3 +33,17 @@ MonoBehaviour:
       Data3: -1864033611
       Data4: 910477796
     Path: event:/Choose_Option
+  chillMusic:
+    Guid:
+      Data1: 1679159394
+      Data2: 1199652082
+      Data3: 455574463
+      Data4: 1646242387
+    Path: event:/Music_Chill
+  darkInvokeMusic:
+    Guid:
+      Data1: -440893594
+      Data2: 1150104338
+      Data3: 60582817
+      Data4: -271188135
+    Path: event:/Music_Dark

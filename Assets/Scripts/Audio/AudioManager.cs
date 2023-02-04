@@ -1,18 +1,27 @@
 using UnityEngine;
-using FMOD;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
+
+    public FMODUnity.EventReference chill;
 
     [FMODUnity.ParamRef]
     public string changeNoiseParam;
 
     public SoundEventsSO soundsEventsSO;
 
+    public FMODUnity.StudioEventEmitter musicEmitter;
+    public FMODUnity.StudioEventEmitter darkMusicEmitter;
+
+    private FMOD.Studio.EventInstance musicEventInstance;
+
     private void Awake()
     {
         Instance = this;
+        musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(chill);
+        musicEventInstance.start();
+        musicEventInstance.release();
     }
 
     private void Update()
@@ -23,7 +32,10 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeMusic()
     {
-        //FMODUnity.RuntimeManager.SetParameter()
+        musicEventInstance.setPaused(true);
+        //musicEventInstance.release();
+        musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(soundsEventsSO.darkInvokeMusic);
+        musicEventInstance.start();
     }
 
     public void ClickSound() => FMODUnity.RuntimeManager.PlayOneShot(soundsEventsSO.clickSound);

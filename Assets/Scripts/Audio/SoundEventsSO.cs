@@ -6,4 +6,7 @@ public class SoundEventsSO : ScriptableObject
     public FMODUnity.EventReference clickSound;
     public FMODUnity.EventReference openDialogSound;
     public FMODUnity.EventReference chooseOptionSound;
+
+    public FMODUnity.EventReference chillMusic;
+    public FMODUnity.EventReference darkInvokeMusic;
 }
