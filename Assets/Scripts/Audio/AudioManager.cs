@@ -5,7 +5,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    public SoundEventsSO soundsEventsSO;
+    [SerializeField] private SoundEventsSO soundsEventsSO;
 
     private static FMOD.Studio.EventInstance musicEventInstance;
 
@@ -42,8 +42,7 @@ public class AudioManager : MonoBehaviour
             yield return null;
         }
 
-
-
+        // NOISE
         musicEventInstance.setPaused(true);
         musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(soundsEventsSO.noiseMusic);
         musicEventInstance.setVolume(1);
@@ -55,14 +54,13 @@ public class AudioManager : MonoBehaviour
             yield return null;
         }
 
-
-
+        // DARK
         musicEventInstance.setPaused(true);
         musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(soundsEventsSO.darkInvokeMusic);
         musicEventInstance.setVolume(0.1f);
         musicEventInstance.start();
 
-        timer = 0f;
+        timer = 0.1f;
         while (timer <= reduceVolSeconds)
         {
             timer += Time.deltaTime;
