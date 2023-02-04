@@ -232,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 238329477}
   - component: {fileID: 238329476}
+  - component: {fileID: 238329478}
   m_Layer: 0
   m_Name: Cartel_falso
   m_TagString: Untagged
@@ -306,6 +307,18 @@ Transform:
   m_Father: {fileID: 374412511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &238329478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238329475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e623ebecaa47140bdb5c187e5be2da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &309852636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1344930521, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
