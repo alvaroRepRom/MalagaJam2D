@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
