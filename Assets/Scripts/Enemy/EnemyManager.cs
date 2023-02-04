@@ -32,7 +32,7 @@ namespace Enemy
         public void ActiveDialogue()
         {
             canvas.SetActive(true);
-            canvas.GetComponent<ConversationSystem>().SetText();
+            GetComponent<ConversationSystem>().SetText();
         }
 
         private void Update()
@@ -54,7 +54,7 @@ namespace Enemy
         private void ButtonSelected(Button button)
         {
             String response = button.GetComponentInChildren<TextMeshProUGUI>().text;
-            rootValue += canvas.GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
+            rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
             canvas.SetActive(false);
         }
         
