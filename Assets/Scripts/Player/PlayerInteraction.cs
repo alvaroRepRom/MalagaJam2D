@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Enemy;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
@@ -21,6 +22,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         //Interactuamos con el primer enemigo de la lista.
         _isInteracting = true;
+        _enemiesInSight[0].GetComponent<EnemyManager>().ActiveDialogue();
         Debug.Log($"Interactuando con {_enemiesInSight[0].name}");
         _isInteracting = false;
     }
