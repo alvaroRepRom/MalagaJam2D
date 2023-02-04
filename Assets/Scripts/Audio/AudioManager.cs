@@ -69,6 +69,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void SecondSection() => musicEventInstance.setParameterByName(soundsEventsSO.sectionParam, 1);
+    public void ThirdSection() => musicEventInstance.setParameterByName(soundsEventsSO.sectionParam, 2);
+
     public void CloseInstance()
     {
         musicEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);

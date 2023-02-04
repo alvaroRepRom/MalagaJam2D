@@ -60,6 +60,15 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.ChangeMusic();
             hasChangeMusic = true;
         }
+
+        if (hasChangeMusic && timer >= aGameSeconds * 0.9f)
+        {
+            AudioManager.Instance.ThirdSection();
+        }
+        if (hasChangeMusic && timer >= aGameSeconds * 0.75f)
+        {
+            AudioManager.Instance.SecondSection();
+        }
     }
 
     private void ChangeScene() 
