@@ -1,9 +1,11 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameManager Instance { get; private set; }
+    public static GameManager Instance { get; private set; }
 
     public float aGameSeconds = 60f;
     public GameObject[] candles;
@@ -13,11 +15,16 @@ public class GameManager : MonoBehaviour
     private float clockTimer = 0f;
     private int ticks = 0;
     private bool hasChangeMusic = false;
+    private bool hasEndGame = false;
+
+    public Action onTimeComplete;
 
     private void Awake() => Instance = this;
 
     private void Update()
     {
+        if (hasEndGame) return;
+
         timer += Time.deltaTime;
         clockTimer += Time.deltaTime;
 
@@ -50,10 +57,19 @@ public class GameManager : MonoBehaviour
     {
         if (timer >= aGameSeconds)
         {
+            hasEndGame = true;
             PlayerPrefs.SetInt("people", peopleLeft);
             PlayerPrefs.Save();
-            SceneManager.LoadScene("Final"); 
+            onTimeComplete?.Invoke();
+            StartCoroutine(WaitToNextScene());
         }
+    }
+
+    private IEnumerator WaitToNextScene()
+    {
+        WaitForSeconds waitTime = new WaitForSeconds(5);
+        yield return waitTime;
+        SceneManager.LoadScene("Final");
     }
 
     public void NPCHasLeftRoom() => peopleLeft--;

@@ -319,6 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e623ebecaa47140bdb5c187e5be2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endDistance: 2.3
+  secondsFalling: 1
 --- !u!1 &309852636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1344930521, guid: 829abe96f9914ce49a09a81e465b5837, type: 3}
@@ -2176,7 +2178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ff7331be785384ebb7ef3ac56897d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aGameSeconds: 60
+  aGameSeconds: 5
   candles:
   - {fileID: 1274703712}
   - {fileID: 1623407253}
