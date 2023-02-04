@@ -11,6 +11,8 @@ public class ShowInvocation : MonoBehaviour
     public float timeToShow = 5f;
     public float maxNumOfPeople = 20;
 
+    public ParticleSystem explosion;
+
     private void Start() => StartCoroutine(ShowInvocationA());
 
     private IEnumerator ShowInvocationA()
@@ -23,6 +25,7 @@ public class ShowInvocation : MonoBehaviour
             yield return null;
         }
 
+        explosion.Play();
         CalculateInvocaction();
     }
 
