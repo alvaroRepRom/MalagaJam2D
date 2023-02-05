@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (!isGameActive) return;
         if (hasEndGame) return;
 
         timer += Time.deltaTime;
@@ -99,4 +98,10 @@ public class GameManager : MonoBehaviour
 
     public void NPCHasLeftRoom() => peopleLeft--;
     public void StartGame() => isGameActive = true;
+
+    public bool IsgameActive
+    {
+        get => isGameActive;
+        set => isGameActive = value;
+    }
 }

@@ -16,6 +16,7 @@ namespace Enemy
                     //Cambiamos el sprite al de las raices
                     ChangeSprite(enemyManager);
                     enemyManager.GetComponentInChildren<Animator>().SetBool("Walk", false);
+                    
                     //Iniciamos el timer.
                     enemyManager.SetTimer();
                     enemyManager.runTimer = true;
