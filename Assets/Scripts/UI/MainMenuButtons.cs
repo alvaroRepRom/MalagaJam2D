@@ -6,12 +6,14 @@ public class MainMenuButtons : MonoBehaviour
 {
     public GameObject Instruction;
     public GameObject story;
+    public GameObject storyEnglish;
     public float waitTime = 3f;
 
     public void StartButton()
     {
         Instruction.SetActive(true);
         story.SetActive(true);
+        storyEnglish.SetActive(true);
 
         StartCoroutine(LoadGame());
     }

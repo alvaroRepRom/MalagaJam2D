@@ -1267,7 +1267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Instruction: {fileID: 2055050808}
   story: {fileID: 235753195}
-  waitTime: 4.5
+  storyEnglish: {fileID: 1139340790}
+  waitTime: 10
 --- !u!4 &967722633
 Transform:
   m_ObjectHideFlags: 0
@@ -1424,10 +1425,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Howard encontr\xF3 un viejo libro donde se describe una invocaci\xF3n,
-    Debe mantener 12 almas confundidas a medianoche en la habitaci\xF3n preparada
-    para el ritual. \nHoward har\xE1 lo que pueda para evitar que se vayan pero no
-    promete nada."
+  m_text: "Howard found an old book where an invocation is described, He must keep
+    12 confused souls at midnight in the room prepared for the ritual. \nHoward will
+    do what he can to keep them from leaving but promises nothing."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4da38a487111a2547a4d0f2ceaf52595, type: 2}
   m_sharedMaterial: {fileID: 2781854631863760091, guid: 4da38a487111a2547a4d0f2ceaf52595, type: 2}
