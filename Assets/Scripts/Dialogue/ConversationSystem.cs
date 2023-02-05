@@ -18,7 +18,6 @@ namespace Dialogue
         private void Awake()
         {
             dic = new List<Question>();
-            Debug.Log("idioma ->" + PlayerPrefs.GetInt("languaje"));
             if (PlayerPrefs.GetInt("languaje") == 0) InitiateDictSpanish();
             else InitiateDictEnglish();
         }

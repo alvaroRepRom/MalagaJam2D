@@ -2071,6 +2071,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5495736126064399917, guid: bfc0496c63821a64390b7e6d43568ca5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7696931953871297522, guid: bfc0496c63821a64390b7e6d43568ca5, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3797,7 +3801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ff7331be785384ebb7ef3ac56897d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aGameSeconds: 60
+  aGameSeconds: 120
   candles:
   - {fileID: 1274703712}
   - {fileID: 1623407253}

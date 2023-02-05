@@ -14,7 +14,7 @@ namespace Enemy
                 if (Vector2.Distance(enemyManager.transform.position, enemyManager.waypoint.position) < 0.05f && !enemyManager.runTimer)
                 {
                     //Cambiamos el sprite al de las raices
-                    enemyManager.ChangeSprite();
+                    ChangeSprite(enemyManager);
                     //Iniciamos el timer.
                     enemyManager.SetTimer();
                     enemyManager.runTimer = true;
@@ -33,6 +33,12 @@ namespace Enemy
         {
             enemyManager.runTimer = false;
             Debug.Log("Raices 3");
+        }
+
+        public void ChangeSprite(EnemyManager enemyManager)
+        {
+            enemyManager.brote2.SetActive(false);
+            enemyManager.raices.SetActive(true);
         }
     }
 }

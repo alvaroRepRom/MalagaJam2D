@@ -15,8 +15,14 @@ namespace Enemy
 
         public override void OnStateEnter(EnemyManager enemyManager)
         {
-            enemyManager.ChangeSprite();
+            ChangeSprite(enemyManager);
             Debug.Log("Raices 1");
+        }
+
+        public void ChangeSprite(EnemyManager enemyManager)
+        {
+            enemyManager.brote1.SetActive(true);
+            enemyManager.brote2.SetActive(false);
         }
     }
 }

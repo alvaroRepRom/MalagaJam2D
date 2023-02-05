@@ -141,7 +141,8 @@ namespace Enemy
         {
             string response = button.GetComponentInChildren<TextMeshProUGUI>().text;
             _rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
-            ChangeSprite();
+            ChangeState();
+            _time = 0.0f;
             AudioManager.Instance.ChooseOptionSound();
             canvas.SetActive(false);
         }
@@ -149,30 +150,6 @@ namespace Enemy
         #endregion
 
         #region Roots
-
-        public void ChangeSprite()
-        {
-            switch (_rootValue)
-            {
-                case 1:
-                    brote1.SetActive(true);
-                    brote2.SetActive(false);
-                    break;
-                case 2:
-                    brote1.SetActive(false);
-                    brote2.SetActive(true);
-                    raices.SetActive(false);
-                    break;
-                case 3:
-                    brote2.SetActive(false);
-                    raices.SetActive(true);
-                    break;
-                default:
-                    brote1.SetActive(false);
-                    break;
-            }
-            _time = 0.0f;
-        }
 
         private void DecreaseRoot()
         {

@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Movemos al player con la velocidad del RigidBody.
         _rb2D.velocity = _speed * Time.deltaTime * _moveVector;
+        GetComponentInChildren<Animator>().SetBool("Walk", (_horizontal!=0 || _vertical!=0));
         //Flipeamos el sprite del jugador sólo cuando se mueva.
         if (_horizontal != 0) TurnPlayer();
     }
