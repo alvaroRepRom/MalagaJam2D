@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuButtons : MonoBehaviour
 {
     public GameObject Instruction;
+    public float waitTime = 3f;
 
     public void StartButton()
     {
@@ -20,7 +21,8 @@ public class MainMenuButtons : MonoBehaviour
 
     private IEnumerator LoadGame()
     {
-        yield return new WaitForSeconds(3);
+        WaitForSeconds waiting = new(waitTime);
+        yield return waiting;
         SceneManager.LoadScene("Game");
     }
 }
