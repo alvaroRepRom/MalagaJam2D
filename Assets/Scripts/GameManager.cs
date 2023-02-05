@@ -38,7 +38,11 @@ public class GameManager : MonoBehaviour
         clockTimer += Time.deltaTime;
 
         if (peopleLeft == 0)
+        {
+            hasEndGame = true;
+            onTimeComplete?.Invoke();
             StartCoroutine(WaitToNextScene());
+        }
 
         FireClock();
         ChangeMusic();
