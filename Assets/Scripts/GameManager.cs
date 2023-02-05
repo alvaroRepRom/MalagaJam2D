@@ -37,6 +37,9 @@ public class GameManager : MonoBehaviour
         timer += Time.deltaTime;
         clockTimer += Time.deltaTime;
 
+        if (peopleLeft == 0)
+            StartCoroutine(WaitToNextScene());
+
         FireClock();
         ChangeMusic();
         ChangeScene();
