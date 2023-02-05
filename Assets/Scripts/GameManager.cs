@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public float aGameSeconds = 60f;
     public GameObject[] candles;
     public int peopleLeft = 12;
-    public int peopleOnWaypoint = 8;
+    public int peopleOnWaypoint = 12;
     public List<GameObject> waypoints;
 
     private float timer = 0f;

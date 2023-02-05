@@ -4144,7 +4144,7 @@ MonoBehaviour:
   - {fileID: 1234766321}
   - {fileID: 1919778545}
   peopleLeft: 12
-  peopleOnWaypoint: 0
+  peopleOnWaypoint: 12
   waypoints:
   - {fileID: 436411554}
   - {fileID: 600259571}

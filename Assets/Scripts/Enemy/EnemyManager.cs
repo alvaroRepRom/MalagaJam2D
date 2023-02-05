@@ -73,7 +73,8 @@ namespace Enemy
         private void Update()
         {
             if(canvas.activeSelf) PressButton();
-            if (_time > _unrootTime && runTimer) DecreaseRoot();
+            if (_time > _unrootTime && runTimer) 
+                DecreaseRoot();
             _time += Time.deltaTime;
             
             _currentState.Execute(this);
@@ -98,7 +99,6 @@ namespace Enemy
                     SetState(new EnemyState0());
                     break;
             }
-            _time = 0.0f;
         }
         
         public void SetState(EnemyState newState)
@@ -147,6 +147,7 @@ namespace Enemy
         {
             string response = button.GetComponentInChildren<TextMeshProUGUI>().text;
             _rootValue += GetComponent<ConversationSystem>().CheckResponse(archetipe, response);
+            if (_rootValue == 2) GameManager.Instance.peopleOnWaypoint++;
             ChangeState();
             _time = 0.0f;
             AudioManager.Instance.ChooseOptionSound();
@@ -161,11 +162,17 @@ namespace Enemy
         {
             if (_rootValue != 0)
             {
+                if (!(_rootValue-1 == 1 &&
+                    GameManager.Instance.peopleOnWaypoint - GameManager.Instance.peopleOnWaypoint <= 3))
+                {
+                    
+                }
                 _rootValue -= 1;
+                if (_rootValue == 1) GameManager.Instance.peopleOnWaypoint--;
                 ChangeState();
                 _unrootTime = Random.Range(minTime, maxTime);
-                _time = 0.0f;
             }
+            _time = 0.0f;
         }
 
         #endregion
