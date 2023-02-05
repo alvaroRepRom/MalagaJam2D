@@ -75,7 +75,7 @@ namespace Enemy
         private void Update()
         {
             if(canvas.activeSelf) PressButton();
-            if (_time > _unrootTime && runTimer) 
+            if (_time > _unrootTime && runTimer && !stopMoving) 
                 DecreaseRoot();
             _time += Time.deltaTime;
             
