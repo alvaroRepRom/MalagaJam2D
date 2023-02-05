@@ -151,7 +151,7 @@ namespace Dialogue
                 "No intentes disimular", "Estamos preparando la diversión", 
                 "Aquí tengo el ambientador", "Allí están mis pesas");
             CreateQuestion("Me he olvidado la chaqueta arriba", 
-                "Esta de Lucky Star", "La llevas puesta", 
+                "¿Esta de Lucky Star?", "La llevas puesta", 
                 "Te la traigo", "Para qué, haz flexiones");
             CreateQuestion("Esta fiesta es un muermo", 
                 "Mejor que el lol", "¡¡¡Fiesta!!!", 
