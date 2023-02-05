@@ -1643,6 +1643,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1378635843}
     - target: {fileID: 1916763906995003529, guid: a304c5202ee3e8a419878f1c5b2ffa98, type: 3}
+      propertyPath: archetipe
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916763906995003529, guid: a304c5202ee3e8a419878f1c5b2ffa98, type: 3}
       propertyPath: root0Speed
       value: 2
       objectReference: {fileID: 0}
@@ -1898,6 +1902,10 @@ PrefabInstance:
       propertyPath: exit
       value: 
       objectReference: {fileID: 1378635843}
+    - target: {fileID: 1916763906995003529, guid: 2be881b7d5b71864fba46f113860a0c3, type: 3}
+      propertyPath: archetipe
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1916763906995003529, guid: 2be881b7d5b71864fba46f113860a0c3, type: 3}
       propertyPath: root0Speed
       value: 2
@@ -2342,6 +2350,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1378635843}
     - target: {fileID: 1916763906995003529, guid: a304c5202ee3e8a419878f1c5b2ffa98, type: 3}
+      propertyPath: archetipe
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916763906995003529, guid: a304c5202ee3e8a419878f1c5b2ffa98, type: 3}
       propertyPath: root0Speed
       value: 2
       objectReference: {fileID: 0}
@@ -2693,6 +2705,10 @@ PrefabInstance:
       propertyPath: exit
       value: 
       objectReference: {fileID: 1378635843}
+    - target: {fileID: 1916763906995003529, guid: 2be881b7d5b71864fba46f113860a0c3, type: 3}
+      propertyPath: archetipe
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1916763906995003529, guid: 2be881b7d5b71864fba46f113860a0c3, type: 3}
       propertyPath: root0Speed
       value: 2
@@ -3501,6 +3517,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1378635843}
     - target: {fileID: 1916763906995003529, guid: 2be881b7d5b71864fba46f113860a0c3, type: 3}
+      propertyPath: archetipe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916763906995003529, guid: 2be881b7d5b71864fba46f113860a0c3, type: 3}
       propertyPath: root0Speed
       value: 2
       objectReference: {fileID: 0}
@@ -3611,6 +3631,10 @@ PrefabInstance:
       propertyPath: exit
       value: 
       objectReference: {fileID: 1378635843}
+    - target: {fileID: 1916763906995003529, guid: a304c5202ee3e8a419878f1c5b2ffa98, type: 3}
+      propertyPath: archetipe
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1916763906995003529, guid: a304c5202ee3e8a419878f1c5b2ffa98, type: 3}
       propertyPath: root0Speed
       value: 2

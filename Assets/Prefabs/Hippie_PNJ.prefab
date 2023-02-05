@@ -2102,7 +2102,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8964716519883991313}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e2bb9d453247979014b98af52455d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  archetipe: 3
+  archetipe: 1
   maxTime: 4
   minTime: 6
   canvas: {fileID: 1061546748}
@@ -2154,11 +2154,11 @@ MonoBehaviour:
   interacting: 0
   runTimer: 0
   waypoint: {fileID: 0}
-  defaultSpeed: 7
-  root2Speed: 7
+  defaultSpeed: 2.5
+  root2Speed: 1.5
   exit: {fileID: 0}
-  root1Speed: 4
-  root0Speed: 7
+  root1Speed: 0.75
+  root0Speed: 2
 --- !u!114 &5042140114132679015
 MonoBehaviour:
   m_ObjectHideFlags: 0
