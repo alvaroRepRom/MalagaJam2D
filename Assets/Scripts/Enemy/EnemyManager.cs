@@ -1,4 +1,5 @@
-﻿using Dialogue;
+﻿using System;
+using Dialogue;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -77,15 +78,15 @@ namespace Enemy
             if (_time > _unrootTime && runTimer) 
                 DecreaseRoot();
             _time += Time.deltaTime;
-
+            
             Vector3 pos = transform.position;
             
-            _currentState.Execute(this);
             
-            if (stopMoving)
-            {
-                rB.position = pos;
-            }
+            if (!stopMoving) _currentState.Execute(this, Time.deltaTime);
+        }
+
+        private void FixedUpdate()
+        {
         }
         
         #region States

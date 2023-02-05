@@ -24,7 +24,11 @@ public class GameManager : MonoBehaviour
 
     public Action onTimeComplete;
 
-    private void Awake() => Instance = this;
+    private void Awake()
+    {
+        Instance = this;
+        Application.targetFrameRate = 60;
+    }
 
     private void Update()
     {

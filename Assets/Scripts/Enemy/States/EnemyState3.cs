@@ -4,7 +4,7 @@ namespace Enemy
 {
     public class EnemyState3 : EnemyState
     {
-        public override void Execute(EnemyManager enemyManager)
+        public override void Execute(EnemyManager enemyManager, float deltaTime)
         {
             //Si ya ha llegado al checkpoint y ha empezado el timer, salimos.
             if (enemyManager.runTimer) return;
@@ -27,7 +27,7 @@ namespace Enemy
                     Vector2 dir = enemyManager.waypoint.position - enemyManager.transform.position;
                     dir.Normalize();
                     enemyManager.GetComponentInChildren<Animator>().SetBool("Walk", true);
-                    enemyManager.rB.MovePosition(enemyManager.rB.position + (dir * enemyManager.defaultSpeed * Time.deltaTime));
+                    enemyManager.rB.MovePosition(enemyManager.rB.position + (dir * enemyManager.defaultSpeed * deltaTime));
                 }
             }
         }
