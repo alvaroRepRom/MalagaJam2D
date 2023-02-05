@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private int ticks = 0;
     private bool hasChangeMusic = false;
     private bool hasEndGame = false;
+    private bool isGameActive = false;
 
     public Action onTimeComplete;
 
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (!isGameActive) return;
         if (hasEndGame) return;
 
         timer += Time.deltaTime;
@@ -92,4 +94,5 @@ public class GameManager : MonoBehaviour
     }
 
     public void NPCHasLeftRoom() => peopleLeft--;
+    public void StartGame() => isGameActive = true;
 }
