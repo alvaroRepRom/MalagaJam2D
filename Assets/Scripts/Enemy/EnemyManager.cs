@@ -59,6 +59,7 @@ namespace Enemy
         private int _rootValue;
         private int _unrootTime;
         private float _time;
+        private bool stopMoving = false;
 
         private void Awake()
         {
@@ -76,8 +77,15 @@ namespace Enemy
             if (_time > _unrootTime && runTimer) 
                 DecreaseRoot();
             _time += Time.deltaTime;
+
+            Vector3 pos = transform.position;
             
             _currentState.Execute(this);
+            
+            if (stopMoving)
+            {
+                rB.position = pos;
+            }
         }
         
         #region States
@@ -125,22 +133,39 @@ namespace Enemy
         {
             if (_rootValue != 3 && !canvas.activeSelf)
             {
+                interacting = true;
                 AudioManager.Instance.OpenDialogSound();
                 canvas.SetActive(true);
                 GetComponent<ConversationSystem>().SetText();
+                stopMoving = true;
             }
         }
         
         private void PressButton()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
                 ButtonSelected(button1.GetComponent<Button>());
+                stopMoving = false;
+            }
+
             if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
                 ButtonSelected(button2.GetComponent<Button>());
+                stopMoving = false;
+            }
             if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
                 ButtonSelected(button3.GetComponent<Button>());
+                stopMoving = false;
+            }
             if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
                 ButtonSelected(button4.GetComponent<Button>());
+                stopMoving = false;
+            }
+            
+            interacting = false;
         }
         
         private void ButtonSelected(Button button)
