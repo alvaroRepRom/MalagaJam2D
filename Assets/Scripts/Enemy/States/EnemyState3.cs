@@ -35,7 +35,6 @@ namespace Enemy
         public override void OnStateEnter(EnemyManager enemyManager)
         {
             enemyManager.runTimer = false;
-            Debug.Log("Raices 3");
         }
 
         public override void ChangeSprite(EnemyManager enemyManager)

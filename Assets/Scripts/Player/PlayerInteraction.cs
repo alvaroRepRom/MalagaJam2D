@@ -8,7 +8,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private List<GameObject> _enemiesInSight = new();
     private GameObject _currentEnemy;
-    private bool _isInteracting; //Esta variable se usará para evitar bugs de interacción al estar ya dialogando con un enemigo.
+    public bool _isInteracting; //Esta variable se usará para evitar bugs de interacción al estar ya dialogando con un enemigo.
 
     private void Update()
     {
@@ -24,7 +24,6 @@ public class PlayerInteraction : MonoBehaviour
         _isInteracting = true;
         _enemiesInSight[0].GetComponent<EnemyManager>().ActiveDialogue();
         Debug.Log($"Interactuando con {_enemiesInSight[0].name}");
-        _isInteracting = false;
     }
 
     private bool CanInteract()

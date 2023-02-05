@@ -51,11 +51,13 @@ namespace Enemy
 
         [Header("Root1")]
         public Transform exit;
+        public float yValue;
         public float root1Speed;
         
         [Header("Root0")]
         public float root0Speed;
-        
+
+        private PlayerInteraction _playerInteraction;
         private EnemyState _currentState;
         private int _rootValue;
         private int _unrootTime;
@@ -64,6 +66,7 @@ namespace Enemy
 
         private void Awake()
         {
+            _playerInteraction = FindObjectOfType<PlayerInteraction>();
             rB = GetComponent<Rigidbody2D>();
             _rootValue = 3;
             _unrootTime = Random.Range(minTime, maxTime);
@@ -104,6 +107,7 @@ namespace Enemy
                     SetState(new EnemyState0());
                     break;
             }
+            Debug.Log($"Estado actual: {_currentState}");
         }
         
         public void SetState(EnemyState newState)
@@ -144,22 +148,26 @@ namespace Enemy
             {
                 ButtonSelected(button1.GetComponent<Button>());
                 stopMoving = false;
+                _playerInteraction._isInteracting = false;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 ButtonSelected(button2.GetComponent<Button>());
                 stopMoving = false;
+                _playerInteraction._isInteracting = false;
             }
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 ButtonSelected(button3.GetComponent<Button>());
                 stopMoving = false;
+                _playerInteraction._isInteracting = false;
             }
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 ButtonSelected(button4.GetComponent<Button>());
                 stopMoving = false;
+                _playerInteraction._isInteracting = false;
             }
             
             interacting = false;

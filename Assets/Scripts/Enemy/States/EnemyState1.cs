@@ -10,13 +10,15 @@ namespace Enemy
             if (enemyManager.interacting) return;
             Vector2 dir = enemyManager.exit.position - enemyManager.transform.position;
             dir.Normalize();
-            enemyManager.rB.MovePosition(enemyManager.rB.position + (dir * enemyManager.root1Speed * deltaTime));
+            if (enemyManager.transform.position.y <= enemyManager.yValue)
+                enemyManager.rB.MovePosition(enemyManager.rB.position + (Vector2.up * enemyManager.root1Speed * deltaTime));
+            else
+                enemyManager.rB.MovePosition(enemyManager.rB.position + (dir * enemyManager.root1Speed * deltaTime));
         }
 
         public override void OnStateEnter(EnemyManager enemyManager)
         {
             ChangeSprite(enemyManager);
-            Debug.Log("Raices 1");
         }
 
         public override void ChangeSprite(EnemyManager enemyManager)

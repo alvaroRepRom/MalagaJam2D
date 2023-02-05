@@ -30,7 +30,6 @@ namespace Enemy
         public override void OnStateEnter(EnemyManager enemyManager)
         {
             ChangeSprite(enemyManager);
-            Debug.Log("Raices 2");
         }
         
         public override void ChangeSprite(EnemyManager enemyManager)
