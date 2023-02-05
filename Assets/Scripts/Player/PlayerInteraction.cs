@@ -7,7 +7,6 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private KeyCode _interactionKey;
 
     private List<GameObject> _enemiesInSight = new();
-    private GameObject _currentEnemy;
     public bool _isInteracting; //Esta variable se usará para evitar bugs de interacción al estar ya dialogando con un enemigo.
 
     private void Update()
@@ -20,9 +19,11 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Interact()
     {
+        EnemyManager eM = _enemiesInSight[0].GetComponent<EnemyManager>();
+        if (eM == null || eM._rootValue == 3) return;
         //Interactuamos con el primer enemigo de la lista.
         _isInteracting = true;
-        _enemiesInSight[0].GetComponent<EnemyManager>().ActiveDialogue();
+        eM.ActiveDialogue();
         Debug.Log($"Interactuando con {_enemiesInSight[0].name}");
     }
 

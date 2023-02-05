@@ -59,7 +59,7 @@ namespace Enemy
 
         private PlayerInteraction _playerInteraction;
         private EnemyState _currentState;
-        private int _rootValue;
+        public int _rootValue;
         private int _unrootTime;
         private float _time;
         private bool stopMoving = false;
@@ -132,7 +132,7 @@ namespace Enemy
 
         public void ActiveDialogue()
         {
-            if (_rootValue != 3 && !canvas.activeSelf)
+            if (!canvas.activeSelf)
             {
                 interacting = true;
                 AudioManager.Instance.OpenDialogSound();

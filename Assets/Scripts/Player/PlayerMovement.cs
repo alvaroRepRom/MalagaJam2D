@@ -41,14 +41,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        //if (_playerInteraction._isInteracting)
-        //{
-        //    //_rb2D.velocity = Vector2.zero;
-        //    return;
-        //}
+        if (_playerInteraction._isInteracting)
+        {
+            _rb2D.velocity = Vector2.zero;
+            return;
+        }
         //Movemos al player con la velocidad del RigidBody.
         _rb2D.velocity = _speed * Time.deltaTime * _moveVector;
-        _anim.SetBool("Walk", (_horizontal!=0 || _vertical!=0));
+        _anim.SetBool("Walk", (_horizontal != 0 || _vertical != 0));
         //Flipeamos el sprite del jugador sólo cuando se mueva.
         if (_horizontal != 0) TurnPlayer();
     }
