@@ -2,7 +2,7 @@ namespace Enemy
 {
     public abstract class EnemyState
     {
-        public abstract void Execute();
-        public abstract void OnStateEnter();
+        public abstract void Execute(EnemyManager enemyManager);
+        public abstract void OnStateEnter(EnemyManager enemyManager);
     }
 }
