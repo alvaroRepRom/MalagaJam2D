@@ -19,7 +19,7 @@ namespace Enemy
             Debug.Log("Raices 1");
         }
 
-        public void ChangeSprite(EnemyManager enemyManager)
+        public override void ChangeSprite(EnemyManager enemyManager)
         {
             enemyManager.brote1.SetActive(true);
             enemyManager.brote2.SetActive(false);

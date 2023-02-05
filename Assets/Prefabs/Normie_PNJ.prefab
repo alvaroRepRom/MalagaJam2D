@@ -2067,6 +2067,7 @@ GameObject:
   - component: {fileID: 8964716519883991317}
   - component: {fileID: 1916763906995003529}
   - component: {fileID: 5042140114132679015}
+  - component: {fileID: 1115962370}
   m_Layer: 0
   m_Name: Normie_PNJ
   m_TagString: Enemy
@@ -2149,11 +2150,15 @@ MonoBehaviour:
   brote1: {fileID: 3596222555046296607}
   brote2: {fileID: 5014381104547531611}
   raices: {fileID: 3395106852036551127}
-  root0Speed: 0
-  root1Speed: 0
-  root2Speed: 0
+  rB: {fileID: 0}
   interacting: 0
   runTimer: 0
+  waypoint: {fileID: 0}
+  defaultSpeed: 7
+  root2Speed: 7
+  exit: {fileID: 0}
+  root1Speed: 4
+  root0Speed: 7
 --- !u!114 &5042140114132679015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2171,3 +2176,24 @@ MonoBehaviour:
   response2: {fileID: 1357022521}
   response3: {fileID: 1750502531}
   response4: {fileID: 196375887}
+--- !u!50 &1115962370
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964716519883991313}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

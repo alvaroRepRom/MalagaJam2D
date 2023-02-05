@@ -66,6 +66,7 @@ namespace Enemy
             _rootValue = 3;
             _unrootTime = Random.Range(minTime, maxTime);
             _time = 0.0f;
+            ChangeWaypoint();
             ChangeState();
         }
 
@@ -109,6 +110,11 @@ namespace Enemy
         public void SetTimer()
         {
             _time = 0.0f;
+        }
+
+        public void ChangeWaypoint()
+        {
+            waypoint = GameManager.Instance.waypoints[Random.Range(0, GameManager.Instance.waypoints.Count)].transform;
         }
 
         #endregion

@@ -11,6 +11,7 @@ namespace Enemy
             Vector2 dir = enemyManager.exit.position - enemyManager.transform.position;
             dir.Normalize();
             enemyManager.rB.MovePosition(enemyManager.rB.position + (dir * enemyManager.root0Speed * Time.deltaTime));
+            enemyManager.GetComponentInChildren<Animator>().SetBool("Walk", true);
         }
 
         public override void OnStateEnter(EnemyManager enemyManager)
@@ -19,7 +20,7 @@ namespace Enemy
             Debug.Log("Raices 0");
         }
 
-        public void ChangeSprite(EnemyManager enemyManager)
+        public override void ChangeSprite(EnemyManager enemyManager)
         {
             enemyManager.brote1.SetActive(false);
         }
