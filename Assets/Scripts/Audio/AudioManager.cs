@@ -15,12 +15,6 @@ public class AudioManager : MonoBehaviour
         Init();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            ChangeMusic();
-    }
-
     private void Init()
     {
         musicEventInstance = FMODUnity.RuntimeManager.CreateInstance(soundsEventsSO.chillMusic);
