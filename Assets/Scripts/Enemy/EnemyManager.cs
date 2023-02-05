@@ -1,6 +1,7 @@
 ﻿using System;
 using Dialogue;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -19,7 +20,8 @@ namespace Enemy
     {
         public Archetipe archetipe;
         public int maxTime, minTime;
-        
+        public static int enemiesRunning = 0;
+
         [Header("Canvas")]
         public GameObject canvas;
         public GameObject button1;
@@ -95,6 +97,7 @@ namespace Enemy
             switch (_rootValue)
             {
                 case 1:
+                    if (_currentState.Equals(typeof(EnemyState3))) enemiesRunning--;
                     SetState(new EnemyState1());
                     break;
                 case 2:
@@ -104,7 +107,12 @@ namespace Enemy
                     SetState(new EnemyState3());
                     break;
                 default:
-                    SetState(new EnemyState0());
+                    if (enemiesRunning < 3)
+                    {
+                        enemiesRunning++;
+                        SetState(new EnemyState0());
+                    }
+                    else SetState(new EnemyState1());
                     break;
             }
             Debug.Log($"Estado actual: {_currentState}");
