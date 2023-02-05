@@ -162,15 +162,20 @@ namespace Enemy
         {
             if (_rootValue != 0)
             {
-                if (!(_rootValue-1 == 1 &&
-                    GameManager.Instance.peopleOnWaypoint - GameManager.Instance.peopleOnWaypoint <= 3))
+                if (_rootValue == 2 &&
+                    GameManager.Instance.peopleLeft - GameManager.Instance.peopleOnWaypoint < 3)
                 {
-                    
+                    _rootValue -= 1;
+                    GameManager.Instance.peopleOnWaypoint--;
+                    ChangeState();
+                    _unrootTime = Random.Range(minTime, maxTime);
                 }
-                _rootValue -= 1;
-                if (_rootValue == 1) GameManager.Instance.peopleOnWaypoint--;
-                ChangeState();
-                _unrootTime = Random.Range(minTime, maxTime);
+                else if(_rootValue != 2)
+                {
+                    _rootValue -= 1;
+                    ChangeState();
+                    _unrootTime = Random.Range(minTime, maxTime);
+                }
             }
             _time = 0.0f;
         }
