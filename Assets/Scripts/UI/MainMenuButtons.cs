@@ -7,6 +7,7 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject Instruction;
     public GameObject story;
     public GameObject storyEnglish;
+    public GameObject credits;
     public float waitTime = 3f;
 
     public void StartButton()
@@ -14,10 +15,15 @@ public class MainMenuButtons : MonoBehaviour
         Instruction.SetActive(true);
         story.SetActive(true);
         storyEnglish.SetActive(true);
+        credits.SetActive(false);
 
         StartCoroutine(LoadGame());
     }
 
+    public void CreditsButton()
+    {
+        credits.SetActive(!credits.activeSelf);
+    }
 
     public void QuitButton()
     {
