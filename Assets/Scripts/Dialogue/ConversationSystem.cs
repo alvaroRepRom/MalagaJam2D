@@ -182,7 +182,7 @@ namespace Dialogue
             CreateQuestion("I'm bored", 
                 "Let's play Mario Kart", "We were going to debate about nature", 
                 "Don't get bored", "Let's play beer pong");
-            CreateQuestion("La peor fiesta de la historia",
+            CreateQuestion("Worst party ever",
                 "Let's play Mario Kart", "We were going to debate about nature",
                 "Don't get bored", "Let's play beer pong");
             CreateQuestion("I miss my cat", 
@@ -228,7 +228,7 @@ namespace Dialogue
             CreateQuestion("I have to work now", 
                 "It's telework, you can work from here", "Don't be manipulated by capitalism", 
                 "Your boss called and said you don't have to work today", "You don't have a job");
-            CreateQuestion("Tengo que irme a trabajar",
+            CreateQuestion("I'm leaving, I have to work",
                 "It's telework, you can work from here", "Don't be manipulated by capitalism",
                 "Your boss called and said you don't have to work today", "You don't have a job");
             //20
