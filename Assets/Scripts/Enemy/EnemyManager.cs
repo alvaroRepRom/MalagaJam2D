@@ -92,12 +92,20 @@ namespace Enemy
         
         #region States
 
+        public void StopRunning()
+        {
+            if (_currentState is EnemyState0)
+            {
+                enemiesRunning--;
+            }
+        }
+
         private void ChangeState()
         {
             switch (_rootValue)
             {
                 case 1:
-                    if (_currentState.Equals(typeof(EnemyState3))) enemiesRunning--;
+                    StopRunning();
                     SetState(new EnemyState1());
                     break;
                 case 2:
@@ -112,7 +120,11 @@ namespace Enemy
                         enemiesRunning++;
                         SetState(new EnemyState0());
                     }
-                    else SetState(new EnemyState1());
+                    else
+                    {
+                        _rootValue = 1;
+                        ChangeState();
+                    }
                     break;
             }
             Debug.Log($"Estado actual: {_currentState}");
