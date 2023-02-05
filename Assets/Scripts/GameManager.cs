@@ -1,15 +1,19 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[DefaultExecutionOrder(-100)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
     public float aGameSeconds = 60f;
     public GameObject[] candles;
-    public int peopleLeft = 16;
+    public int peopleLeft = 12;
+    public int peopleOnWaypoint = 8;
+    public List<GameObject> waypoints;
 
     private float timer = 0f;
     private float clockTimer = 0f;
