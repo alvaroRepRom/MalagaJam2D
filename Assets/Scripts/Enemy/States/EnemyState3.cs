@@ -15,6 +15,7 @@ namespace Enemy
                 {
                     //Cambiamos el sprite al de las raices
                     ChangeSprite(enemyManager);
+                    enemyManager.GetComponentInChildren<Animator>().SetBool("Walk", false);
                     //Iniciamos el timer.
                     enemyManager.SetTimer();
                     enemyManager.runTimer = true;
@@ -24,6 +25,7 @@ namespace Enemy
                 {
                     Vector2 dir = enemyManager.waypoint.position - enemyManager.transform.position;
                     dir.Normalize();
+                    enemyManager.GetComponentInChildren<Animator>().SetBool("Walk", true);
                     enemyManager.rB.MovePosition(enemyManager.rB.position + (dir * enemyManager.defaultSpeed * Time.deltaTime));
                 }
             }
@@ -35,7 +37,7 @@ namespace Enemy
             Debug.Log("Raices 3");
         }
 
-        public void ChangeSprite(EnemyManager enemyManager)
+        public override void ChangeSprite(EnemyManager enemyManager)
         {
             enemyManager.brote2.SetActive(false);
             enemyManager.raices.SetActive(true);

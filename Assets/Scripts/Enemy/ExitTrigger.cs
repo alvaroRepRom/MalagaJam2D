@@ -10,7 +10,7 @@ namespace Enemy
             if (col.CompareTag("Enemy"))
             {
                 Destroy(col.gameObject);
-                GameManager.Instance.peopleLeft--;
+                GameManager.Instance.NPCHasLeftRoom();
             }
         }
     }
