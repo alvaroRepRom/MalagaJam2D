@@ -84,10 +84,6 @@ namespace Enemy
             
             if (!stopMoving) _currentState.Execute(this, Time.deltaTime);
         }
-
-        private void FixedUpdate()
-        {
-        }
         
         #region States
 
